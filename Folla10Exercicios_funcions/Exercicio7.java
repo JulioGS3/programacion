@@ -31,11 +31,13 @@ public static int maximo(int i , int j, int l){
         maior = i;
         return i;
     }
-    if (j)
+    if (j > maior){
+        
         return j;
     }
 }
-    }
+}
+    
 
 
 
