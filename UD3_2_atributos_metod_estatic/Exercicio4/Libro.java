@@ -2,22 +2,102 @@
 prezo, exemplar (para gardar 1, 2, ..., ata 30), vendido (valerá false no construtor). Crea tamén os seus métodos
 de acceso, e un construtor que reciba todos os valores. Teremos tamén un método seVende( ), que cambia o valor
 de vendido a true. Engade tamén unha variable estática numLibrosVendidos na que levamos a conta dos libros
-que se venden. Crea agora:
-a) 3 libros de título distinto
-b) 1 libro cun título repetido, e distinto exemplar.
-c) Cambia o prezo do segundo libro
-d) Vende 2 dos libros anteriores e comproba que a variable numLibrosVendidos colle o valor 2.
-e) Define un método estático valeMais que reciba 2 libros como argumentos, e devolva -1 se o primeiro libro
-é máis caro, 1 se o segundo é o máis caro, e 0 se os dous libros valen o mesmo. Debe ser así:
-public static int valeMais( Libro libro1, Libro libro2) {
-... /* Comparamos libro1.prezo con libro2.prezo tendo os 3 return posibles*/
-
-/*f) Comproba que funciona facendo 3 comparacións: o primeiro libro co segundo, o segundo co primeiro, e os
-dous libros que teñen o mesmo título. No AppLibro debes comprobar se o valor devolto é -1, 1 ou 0, e mostrar
-unha saída diferente por consola en cada caso */
+que se venden. */
 
 package UD3_2_atributos_metod_estatic.Exercicio4;
 
 public class Libro {
+
+private String autor;
+private String titulo;
+private int prezo;
+private int exemplar;
+private boolean vendido;
+public static int numLibrosVendidos = 0;
+
+
+public Libro (String autor, String titulo, int prezo, int exemplar, boolean vendido){
+
+    this.autor = autor;
+    this.titulo = titulo;
+    this.prezo = prezo;
+    this.exemplar = exemplar;
+    this.vendido = false;
+}
+
+public void setAutor( String autor){
+
+    this.autor = autor;
     
 }
+public void setTitulo( String titulo){
+
+    this.titulo = titulo;
+    
+}
+public void setPrezo( int prezo){
+
+    this.prezo = prezo;
+    
+}
+
+public void setExemplar(int exemplar){
+
+    this.exemplar = exemplar;
+}
+public void setVendido(){
+
+this.vendido = true;
+
+}
+public void seVende (){
+
+    if( vendido == false){
+
+    numLibrosVendidos++;
+
+    vendido = true;
+
+    }
+}
+
+public static int getNumLibrosVendidos(){
+
+return numLibrosVendidos;
+
+}
+
+public static int valeMais( Libro libro1, Libro libro2){
+
+        int maisCaro = 0;
+
+    if (libro1.prezo > libro2.prezo){
+        
+        maisCaro = -1;
+        
+        return maisCaro;
+    }
+
+    if (libro1.prezo < libro2.prezo){
+
+        maisCaro = 1;
+
+        return maisCaro;
+    }else{
+
+        maisCaro = 0;
+
+         return maisCaro;
+    }
+}
+
+    
+        
+    } 
+    
+    
+
+    
+    
+    
+
