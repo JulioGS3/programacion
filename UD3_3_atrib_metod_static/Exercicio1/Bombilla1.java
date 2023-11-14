@@ -4,7 +4,7 @@ método estático que devolva o valor desa potenciaTotal. Queremos que se vaia g
 total de watios que están empregando as bombillas en cada momento. Pensa como terás que modificar o
 exercicio anterior para que isto aconteza: terás que modificar varios dos métodos xa creados. */
 
-package UD3_3_atrib_metod_static;
+package UD3_3_atrib_metod_static.Exercicio1;
 
 public class Bombilla1 {
     
@@ -21,30 +21,27 @@ public class Bombilla1 {
     }
 
     
-    public Bombilla1(int potencia){
+    public Bombilla1(int pot){
     
-        this.potencia = potencia;
-        potenciaTotal= potencia + potenciaTotal;
+        potencia = pot;
+        potenciaTotal= pot + potenciaTotal;
     }
     
-    public void setPotencia( int potencia){
+    public void setPotencia( int pot){
         
-        
-        if (potencia < 2){
+        potenciaTotal = potenciaTotal - potencia;
 
-            this.potencia = 2;
+        if (pot < 2){
+
+            potencia = 2;
         }
-        else if (potencia > 35){
+        else if (pot > 35){
 
-            this.potencia = 35;
-        }
-        else {
-
-            this.potencia = potencia;
+            potencia = 35;
         }
         
-        potenciaTotal = (potenciaTotal + this.potencia)- potenciaTotal;
-            
+            potenciaTotal = potenciaTotal + potencia;
+    
         
     }
     public int getPotencia(){
@@ -55,26 +52,29 @@ public class Bombilla1 {
     
     public void aumentaPotencia( int h){
     
-        potencia = potencia + h;
-        potenciaTotal = potenciaTotal + h;
     
-        if (potencia < 2 ){
-    
-            potencia = 2;
-            
-        }
+        potenciaTotal = potenciaTotal - potencia;
+        
+        potencia= potencia + h;
+
+       
         if (potencia > 35 ){
     
             potencia = 35;
             
         }
+        potenciaTotal = potenciaTotal + potencia;
+
         } 
         
     
     public void baixaPotencia( int h){
     
-        potencia = potencia-h;
-        potenciaTotal = potenciaTotal-h;
+        
+        potenciaTotal = potenciaTotal - potencia;
+
+        potencia = potencia - h;
+
     
             if(potencia < 2){
     
@@ -86,7 +86,28 @@ public class Bombilla1 {
                 potencia = 35;
                 
             }
-            
+            potenciaTotal = potenciaTotal + potencia;
+          
+}
+public static String comparaBombillas(Bombilla1 bombi1, Bombilla1 bombi2){
+
+    String mensaxe = "son iguales";
+
+
+if(bombi1.potencia > bombi2.potencia){
+
+return bombi1.nome;
+
+}
+if(bombi2.potencia > bombi1.potencia){
+
+return bombi2.nome;
+
+}else{
+
+return mensaxe;
+}
 
 }
 }
+

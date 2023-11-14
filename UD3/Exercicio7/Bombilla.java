@@ -9,7 +9,7 @@ Crea nunha clase AppBombilla un obxecto Bombilla e comproba que todo funciona. C
 correcto, asignando 30, subindo 20, baixando 10, subindo 5, asignando 10 e baixando 20, revisando cada vez o valor da
 potencia e comprobando que en todo momento está entre os valores permitidos. */
 
-package UD3.obxectos.Exercicio7;
+package UD3.Exercicio7;
 
 public class Bombilla {
     

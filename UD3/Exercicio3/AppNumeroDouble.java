@@ -1,4 +1,4 @@
-package UD3.obxectos.Exercicio3;
+package UD3.Exercicio3;
 
 public class AppNumeroDouble {
     public static void main(String[] args) {

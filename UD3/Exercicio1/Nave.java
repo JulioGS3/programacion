@@ -4,7 +4,7 @@ Crea unha clase AppNave, cun único método main( ) na que crees un obxecto Nave
 restando o valor tempo da nave de segundo a segundo ata chegar a 0, avisando finalmente do despegue, indicando o nome da
 nave. Por exemplo: “A nave Apolo13 acaba de despegar!”. */
 
-package UD3.obxectos.Exercicio1;
+package UD3.Exercicio1;
 
 public class Nave {
     
@@ -13,10 +13,9 @@ public class Nave {
     
 
 
-public void Nave (int tempo){
+public void Nave(int temp){
 
-    this.tempo = tempo;
-
+    tempo = temp;
 
 }
 

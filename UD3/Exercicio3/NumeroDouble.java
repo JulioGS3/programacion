@@ -3,7 +3,7 @@ argumentos que asigne o valor a 0.0, e outro con un argumento double que garde n
 noutra clase AppNumeroDouble 4 obxectos da clase empregando 2 veces cada un dos construtores. Comproba que os
 obxectos van tomando eses valores mostrándoos por pantalla. */
 
-package UD3.obxectos.Exercicio3;
+package UD3.Exercicio3;
 
 public class NumeroDouble {
     

@@ -1,4 +1,4 @@
-package UD3.obxectos.Exercicio6;
+package UD3.Exercicio6;
 
 public class AppDinosaurio {
 public static void main(String[] args) {

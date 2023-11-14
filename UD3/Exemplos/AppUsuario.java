@@ -1,4 +1,4 @@
-package UD3.obxectos.Exemplos;
+package UD3.Exemplos;
 
 public class AppUsuario {
 

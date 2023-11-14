@@ -1,4 +1,4 @@
-package UD3.obxectos.Exemplos;
+package UD3.Exemplos;
 
 public class Usuario {
 
@@ -35,5 +35,6 @@ public class Usuario {
     public int getIdade( ){
 
         return idade;
+        
     }
 }

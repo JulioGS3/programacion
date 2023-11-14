@@ -1,4 +1,4 @@
-package UD3.obxectos.Exercicio1;
+package UD3.Exercicio1;
 
 public class AppNave {
     public static void main(String[] args) {
