@@ -29,12 +29,17 @@ public static int maximo(int i , int j, int l){
     if (i > j && i > l){
 
         maior = i;
-        return i;
+        
     }
     if (j > maior){
         
-        return j;
+        maior = j;
     }
+    if(l > maior){
+
+        maior = l;
+    }
+    return maior;
 }
 }
     

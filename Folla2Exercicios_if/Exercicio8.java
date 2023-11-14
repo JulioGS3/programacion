@@ -25,8 +25,7 @@ public static void main(String[] args) {
         sueldoExtra= horas_extra*extra;
         sueldo_ordinarias=40*ordinarias;
         Double total=sueldoExtra+sueldo_ordinarias;
-        System.out.println("traballaches 40 horas ordinarias polas que cobrarás "+sueldo_ordinarias+ "euros, e traballaches "+horas_extra+ " horas extra polas que que vas cobrar "+sueldoExtra+ " euros, é decir,
-         un total de "+total+" euros");
+        System.out.println("traballaches 40 horas ordinarias polas que cobrarás "+sueldo_ordinarias+ "euros, e traballaches "+horas_extra+ " horas extra polas que que vas cobrar "+sueldoExtra+ " euros, é decir, un total de "+total+" euros");
     }
 
 

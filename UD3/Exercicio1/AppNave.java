@@ -5,7 +5,7 @@ public class AppNave {
         
     
 
-    Nave interceptor = new Nave(10); // exercicio 2, se cambiamos o tempo a private non vai
+    Nave interceptor = new Nave(); // exercicio 2, se cambiamos o tempo a private non vai
 
         System.out.println("tempo ");
         

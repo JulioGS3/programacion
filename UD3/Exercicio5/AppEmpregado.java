@@ -13,6 +13,7 @@ public static void main(String[] args) {
     julio.setApellido2("señaris");
     julio.setDni("98432102P");
     julio.setSalario(2500);
+    antonio.setDni("54324567j");
 
     System.out.println(julio.getNome() + " " + " " + julio.getApellido1() + " " + julio.getApellido2() + " co dni " + julio.getDni() + " cobra " + julio.getSalario());
         

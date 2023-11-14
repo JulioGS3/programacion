@@ -12,10 +12,9 @@ public class Nave {
     public int tempo; 
     
 
+    public Nave(){
 
-public void Nave(int temp){
-
-    tempo = temp;
+        tempo = 10;
 
 }
 

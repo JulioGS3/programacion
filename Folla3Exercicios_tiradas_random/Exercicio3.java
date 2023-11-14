@@ -19,7 +19,9 @@ public static void main(String[] args) {
     System.out.println("sacaches un "+sumaTirada1);
 
     if(sumaTirada1==21){
+
         System.out.println("Felicidades!");
+
         return;
     }
 
@@ -32,22 +34,21 @@ public static void main(String[] args) {
 
     
     if(sumaTirada1+sumaTirada2==21){
+
         System.out.println("felicidades");
+        
     return;
     }
 
     int acumulado= sumaTirada1+segundodado2;
-        System.out.println("acumulas "+acumulado+" queres continuar?" );
-        ent.nextLine();
-        String pregunta= ent.nextLine("S / N");
 
-    /* 
-    int dado1= (int)(Math.random()*6)+1;
-    System.out.println("dado un "+dado1);
-    int dado2= (int)(Math.random()*6)+1;
-    System.out.println("dado dous "+dado2);
-    int sumaTirada1= dado1+dado2;
-    System.out.println("sacaches un "+sumaTirada1);*/
+        System.out.println("acumulas "+acumulado+" queres continuar S/N ?" );
+
+        ent.nextLine();
+
+        String pregunta = ent.nextLine();
+
+    
 
     
 
