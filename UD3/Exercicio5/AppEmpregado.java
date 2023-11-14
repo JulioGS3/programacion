@@ -1,4 +1,4 @@
-package UD3.obxectos.Exercicio5;
+package UD3.Exercicio5;
 
 public class AppEmpregado {
 public static void main(String[] args) {

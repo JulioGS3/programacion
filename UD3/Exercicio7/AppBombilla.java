@@ -1,4 +1,4 @@
-package UD3.obxectos.Exercicio7;
+package UD3.Exercicio7;
 
 public class AppBombilla {
 

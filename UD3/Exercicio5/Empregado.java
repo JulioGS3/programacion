@@ -3,7 +3,7 @@ Engade un construtor sen argumentos, que poña uns valores "razoables" neses atr
 nome ), setApelidos(String apelido), setDni(... ), e setSalario(... ), que modifiquen os valores cos argumentos. Crea 2
 empregados e comproba que os métodos fan o que deben facer. */
 
-package UD3.obxectos.Exercicio5;
+package UD3.Exercicio5;
 
 public class Empregado {
  

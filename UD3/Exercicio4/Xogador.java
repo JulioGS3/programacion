@@ -12,7 +12,7 @@ a) Crea un xogador. Mostra os seus valores empregando os métodos.
 b) Modifica os seus atributos a “Roi” e 22.
 c) Mostra de novo os valores dos seus atributos */
 
-package UD3.obxectos.Exercicio4;
+package UD3.Exercicio4;
 
 public class Xogador {
     

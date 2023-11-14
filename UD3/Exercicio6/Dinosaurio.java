@@ -3,7 +3,7 @@ valores considerados por defecto ("Alf", 5), e outro que pida como argumentos es
 setIdade( ), getIdade( ), setNome( ) e getNome( ), todos eles recibindo como argumentos os valores e asignándollos aos
 atributos. Crea noutra clase AppDinosaurio 3 obxectos din1, din2 e din3, e proba os catro métodos con cada un deles. */
 
-package UD3.obxectos.Exercicio6;
+package UD3.Exercicio6;
 
 public class Dinosaurio {
     
