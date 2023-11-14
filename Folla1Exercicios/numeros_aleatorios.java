@@ -13,12 +13,12 @@ public static void main(String[] args) {
     nome = "Julio";
     System.out.println("o meu nome e "+nome); */
 
-
-Double aleatorio= Math.random();
+Double aleatorio = 0.0;
+aleatorio= Math.random();
 System.out.println(aleatorio);
 
 //numeros entre 0 e 10
-Double aleatorio= Math.random()*10;
+aleatorio= Math.random()*10;
 System.out.println(aleatorio);
 
 //podemolo convertir a enteiro
@@ -28,7 +28,7 @@ System.out.println(aleatorioEnteiro);
 
 //sumando 1 non contariamos co 0(aleatorio entre 1 e 10)
 
-Double aleatorio= (Math.random()*10)+1;
+aleatorio= (Math.random()*10)+1;
 
 
 }

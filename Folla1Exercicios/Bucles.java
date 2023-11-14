@@ -9,7 +9,7 @@ public class Bucles {
 
     for(int i=0; i<5; i=i+1){
     System.out.println(i);
-    2}
+    }
         
 /*si non sabemos numero de veces que empregaremos,usamos  a palabra while */
 
@@ -21,11 +21,11 @@ int num=1;
 while( num <10){    
     num= ent.nextInt();
 }
-do{ //executase sempre a prieira vez
+//do{}//executase sempre a prieira vez
 
 
 
-}
+
     }
-
+}
 
