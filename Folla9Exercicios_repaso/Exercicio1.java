@@ -77,7 +77,7 @@ public static void main(String[] args) {
                 
                 }
 
-            case("4"):
+            case("4"):  //forma de facer comparacions con un bucle for, consultar se e a maneira mas optima
 
                 if(flag != 0){
     

@@ -18,7 +18,8 @@ public static void main(String[] args) {
             for(int i=0; i<4; i++){
          
             dividir=dividir*10 + num%10;
-            num/=10;
+            System.out.println(dividir);
+            num= num/10;
             }
             
         System.out.println(dividir);

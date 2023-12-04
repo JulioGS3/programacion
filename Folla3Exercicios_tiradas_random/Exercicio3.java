@@ -8,6 +8,8 @@ public class Exercicio3 {
 public static void main(String[] args) {
     
     Scanner ent= new Scanner(System.in);
+    String resposta = "";
+
 
     System.out.println("primeiro lanzamento");
 
@@ -24,6 +26,7 @@ public static void main(String[] args) {
 
         return;
     }
+    
 
     int segundodado1= (int)(Math.random()*6)+1;
     System.out.println("segunda tirada: dado un "+segundodado1);
@@ -39,6 +42,7 @@ public static void main(String[] args) {
         
     return;
     }
+
 
     int acumulado= sumaTirada1+segundodado2;
 

@@ -17,6 +17,7 @@ public static void main(String[] args) {
     
     String opcion="";
     String cadea = "";
+    String maiusculas ="";
     Scanner entrada = new Scanner(System.in);
 
     while (!opcion.equals("g")) {
@@ -38,20 +39,74 @@ public static void main(String[] args) {
             
             System.out.println("introduce unha frase");
             cadea = entrada.nextLine();
-
             break;
-    
-        default:
+
+        case "b":
+
+            cadea = cadea.toUpperCase();
+            break;
+
+        case "c":
+
+            while(cadea.contains(" ")){
+            cadea = cadea.replace(" ", "");
+            }
+            break;
+        
+        case "d":
+            
+            StringBuilder reves = new StringBuilder();
+            reves = reves.append(cadea);
+            reves = reves.reverse();
+            cadea = reves.toString();
         
             break;
+
+        case "e":
+
+            int pos1 = 0;
+            String palabra1 = "";
+            String primerLetra = "";
+            String cadeaFinal = "";
+            StringBuilder fraseFin = new StringBuilder();
+
+        cadea = cadea.trim();
+
+        while(cadea.contains(" ")){
+
+        
+            pos1 = cadea.indexOf(" ");
+            palabra1 = cadea.substring(0, pos1);
+            cadea = cadea.substring(pos1+1);
+            primerLetra = palabra1.substring(0, 1);
+            primerLetra = primerLetra.toUpperCase();
+            palabra1 = palabra1.substring(1, pos1);
+        
+            cadeaFinal = primerLetra + palabra1;
+            fraseFin = fraseFin.append(cadeaFinal + " ");
+        
+            }
+            String primeiraLetra = "";
+            primeiraLetra = cadea.substring(0,1);
+            primeiraLetra = primeiraLetra.toUpperCase();
+            cadea = cadea.substring(1);
+            primeiraLetra = primeiraLetra+cadea;
+            cadea = fraseFin + primeiraLetra;
+
+            break;
+
+        case "f":
+
+            System.out.println(cadea);
+
+            break;
+   
+        
+}    
     }
-
-    
-
 
         
     }
     
 }
     
-}

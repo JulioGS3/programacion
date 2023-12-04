@@ -17,6 +17,7 @@ public static void main(String[] args) {
         for (int i = numero; i>1 ; i--){
             
             resultado=resultado*i;
+
            
            System.out.println(resultado);
         
