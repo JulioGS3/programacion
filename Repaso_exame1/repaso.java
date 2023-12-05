@@ -1,3 +1,4 @@
+package Repaso_exame1;
 /*10. Declara un array de 12 doubles. Fai un menú para facer o seguinte:
 a) Introducir os 12 números.
 b) Mostrar os 12 números.
