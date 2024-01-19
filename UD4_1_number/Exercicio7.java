@@ -1,42 +1,62 @@
-/*6. Fai un programa que faga repetidamente conversións de euros a dólares ou viceversa, empregando
-JoptionPane. O valor numérico do resultado deberá ter sempre un ancho de 7 en total, con 2 decimais.
-O programa deberá preguntar que tipo de cambio quere facer, de cada vez, ou se quere saír do
-programa: mostra un menú con varias liñas empregando “\n” en linux (ou “\r\n” en Windows).
-Tamén podes empregar “%n” se empregas o método da clase String.format() */
+/* 7. Fai un programa que simule do xogo do aforcado. Teremos 8 gardadas de 8 letras nun array de String.
+Cando o programa elixa aleatoriamente a palabra, aparecerá unha ventá mostrando 8 liñas “_ _ _ _ _ _ _
+_” e o usuario terá que ir introducindo letras. Cando teclee unha letra da palabra elixida, a letra aparecerá
+no que se ve (por exemplo se a palabra é elefante, e introduce a ‘e’ verase así “e _ e _ _ _ _ e”. Terá 10
+intentos para atopar a palabra. Mostra ademais da palabra incompleta, os intentos que lle quedan, e as
+letras que foi elixindo previamente. */
 package UD4_1_number;
-
-import java.util.Locale;
 
 import javax.swing.JOptionPane;
 
 public class Exercicio7 {
 public static void main(String[] args) {
-    
-    String opcion = "";
 
-    while(!opcion.equals("c")){
+     String [] arrayPalabras = new String [8];
 
-        opcion = JOptionPane.showInputDialog("Que tipo de conversion queres facer? \n a ) euros a dollares ?  \n b ) dollares a euros ? \n c ) sair  ");
-        String cantidade = JOptionPane.showInputDialog("introduce a cantidade que deseas");
+    arrayPalabras[0] = "pirineos";
+    arrayPalabras[1] = "elefante";
+    arrayPalabras[3] = "carretes";
+    arrayPalabras[4] = "pantalla";
+    arrayPalabras[5] = "programa";
+    arrayPalabras[6] = "lagartos";
+    arrayPalabras[7] = "rallados";
 
-        Double cantidadeConvertida = Double.parseDouble(cantidade);
+    JOptionPane.showMessageDialog(null, "Este e o xogo do aforcado, pulsa ok para elexir unha palabra, tes 10 intentos para introducir letras");
+    int azar = (int) (Math.random()*7)+1;
+    int contador = 0;
+    String palabraElexida = arrayPalabras [azar];
+    char [] arrayCaracteres = palabraElexida.toCharArray();
+    char [] arrayOculto = new char [8]; 
+    String palabra= "";
 
-        if(opcion.equals("a")){
-
-            Double cantidadeConvert = cantidadeConvertida * 1.09;
-            String cadea = String.format(cantidadeConvertida + " euros son %08.2f dolares" , cantidadeConvert);
-            JOptionPane.showMessageDialog(null, cadea);
+        for (int i = 0; i < arrayOculto.length; i++){
+        arrayOculto[i] = '-';
         }
-        if(opcion.equals("b")){
+       
 
-            Double cantidadeConvert = cantidadeConvertida / 1.09;
-            String cadea = String.format(cantidadeConvertida + " dolares son %08.2f euros" , cantidadeConvert);
-            JOptionPane.showMessageDialog(null, cadea);
-        }
+        while (contador<=10) {
+            
+        for (char i : arrayOculto) {
+        palabra = palabra +i;}
         
+        String adivinar = JOptionPane.showInputDialog(palabra);
+        System.out.println(arrayOculto);
+        contador++;
       
-    }
-    JOptionPane.showMessageDialog(null, "adios");
+            while (palabraElexida.contains(adivinar)) {
+          
+            int posicion = palabraElexida.indexOf(adivinar);
+            char caracter = palabraElexida.charAt(posicion);
+            palabraElexida = palabraElexida.replaceFirst(adivinar, ".");
+            arrayOculto[posicion] = caracter;
+            System.out.println(arrayOculto);
+            }
+        }
+            String mensaxeFinal = "pasacheste de intentos, sintoo";
+            JOptionPane.showMessageDialog(null, mensaxeFinal);
+            
+        }
 
-}
-}
+
+    }
+    
