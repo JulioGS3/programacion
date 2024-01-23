@@ -36,7 +36,7 @@ public class Turismo extends Vehiculo{
         if(getAlugado() == "si"){
             System.out.println("xa está alugado");
         }
-        if{
+        else{
             System.out.println("non esta alugado, podelo alugar. ten ahora mesmo " + kmAlquiler + " kms");
             numTurAlquilados ++;
             numTurismos--;
