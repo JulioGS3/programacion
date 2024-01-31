@@ -18,7 +18,7 @@ public static void main(String[] args) {
     camion2.imprimir();
     camion2.frear(90);
     camion2.imprimir();
-    System.out.println("vai a " + camion2.calculaRevolucionsMotor(5, 10) + " revolucions");
+    System.out.println("vai a " + camion2.calculaRevolucionsMotor(5, 10) + " revolucions" );
 
     barca1.imprimir();
     barca2.recomendarVelocidade(80);
