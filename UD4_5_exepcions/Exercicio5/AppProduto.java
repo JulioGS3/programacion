@@ -2,6 +2,8 @@ package UD4_5_exepcions.Exercicio5;
 
 import java.util.Scanner;
 
+import UD4_5_exepcions.Exercicio5.Ex5Produto;
+
 public class AppProduto {
 public static void main(String[] args) {
 
@@ -17,7 +19,7 @@ public static void main(String[] args) {
         int unidadesProduto1 = Ex5Produto.venderProduto(produto1, vender);
         System.out.println("quedan " + unidadesProduto1 + " unidades"); 
       }
-      catch(Exception e){
+      catch(SenExistencias e){
         System.out.println("non se pode vender, " + e.getMessage());
       }
         
