@@ -37,25 +37,20 @@ public static void main(String[] args) {
 
 Path ruta = Paths.get("/home/sanclemente.local/a23juliogs/"+nome);
 
-    //con ifs
-    
 
-        if(Files.exists(ruta) == true){
-        System.out.println("existe");
+    if(Files.exists(ruta) == true){
+    System.out.println("existe");
     }else{
         System.out.println("non existe");
     }
-    //e asi todos
-    try{
-        Files.isRegularFile(ruta);
+    if(Files.isRegularFile(ruta) == true){
         System.out.println("e un ficheiro");
-    }catch(Exception i){
+    }else{
         System.out.println("non e un ficheiro");
     }
-    try{
-        Files.isWritable(ruta);
+     if(Files.isWritable(ruta) == true){
         System.out.println("si se pode escribir");
-    }catch(Exception o){
+    }else{
         System.out.println("non se pode escribir");
     }
 
