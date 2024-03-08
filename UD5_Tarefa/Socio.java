@@ -10,7 +10,9 @@ para comprobar se a data é correcta
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,16 +22,18 @@ public class Socio {
     public int codSocio;
     public String apelidos;
     public String email;
-    public LocalDate dataNacemento;
-    public static int [] activiadesInscrito;
+    public int anoNacamento;
+    public int mesNacemento;
+    public int diaNacemento;
+    public int [] activiadesInscrito;
 
-    public Socio(String nome, int codSocio, String apelidos, String email, LocalDate dataNacemento) throws ExcepcionsSociedade{
+    public Socio(String nome, int codSocio, String apelidos, String email, int dia, int mes, int ano) throws ExcepcionsSociedade{
         this.nome = nome;
         this.codSocio = codSocio;
         this.apelidos = apelidos;
         this.email = email;
         try{
-            this.dataNacemento = dataNacemento;
+           LocalDate fecha = LocalDate.of(dia, mes, ano);
         }catch(Exception e){
             System.out.println(e);
         }
@@ -80,21 +84,41 @@ public class Socio {
         this.email = email;
     }
 
-    public LocalDate getDataNacemento() {
-        return dataNacemento;
+    public int getAnoNacamento() {
+        return anoNacamento;
     }
-
-    public void setDataNacemento(LocalDate dataNacemento) {
-        this.dataNacemento = dataNacemento;
+    public void setAnoNacamento(int anoNacamento) {
+        this.anoNacamento = anoNacamento;
     }
-
-    public static int[] getActiviadesInscrito() {
+    public int getMesNacemento() {
+        return mesNacemento;
+    }
+    public void setMesNacemento(int mesNacemento) {
+        this.mesNacemento = mesNacemento;
+    }
+    public int getDiaNacemento() {
+        return diaNacemento;
+    }
+    public void setDiaNacemento(int diaNacemento) {
+        this.diaNacemento = diaNacemento;
+    }
+    public int[] getActiviadesInscrito() {
         return activiadesInscrito;
     }
 
-    public static void setActiviadesInscrito(int[] activiadesInscrito) {
-        Socio.activiadesInscrito = activiadesInscrito;
+    public static void setActiviadesInscrito(Socio socio, int activiadesInscrito) {
+        for (int i = 0; i < 3; i++) {
+           socio.activiadesInscrito[i] = activiadesInscrito;
+        }
+        }
+    @Override
+    public String toString() {
+        
+        return "Socio [nome=" + nome + ", codSocio=" + codSocio + ", apelidos=" + apelidos + ", email=" + email
+                + ", anoNacamento=" + anoNacamento + ", mesNacemento=" + mesNacemento + ", diaNacemento=" + diaNacemento
+                + ", activiadesInscrito=";
     }
+    
 
    
 

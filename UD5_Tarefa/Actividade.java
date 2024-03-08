@@ -18,7 +18,7 @@ public class Actividade {
     public String salaActividade;
 
 
-    public Actividade(int codActividade, String nomeActiviade, int horasSemanais, Double prezoActividade, String salaActividade) throws ExcepcionsSociedade {
+    public Actividade(int codActividade, String nomeActividade, int horasSemanais, Double prezoActividade, String salaActividade) throws ExcepcionsSociedade {
 
         this.codActividade = codActividade;
         this.nomeActividade = nomeActividade;
@@ -33,7 +33,7 @@ public class Actividade {
             throw new ExcepcionsSociedade("o prezo debe ser inferior a 50", 2);
         }
         if(Actividade.comprobarSala(salaActividade) == false){
-            throw new ExcepcionsSociedade("nome da sala non válido", 3);
+            throw new ExcepcionsSociedade("nome da sala non válido, debe ser Castelao ou Dali", 3);
         }
     }
 
@@ -55,7 +55,7 @@ public class Actividade {
     }
     public static boolean comprobarSala(String salaActividade){
     
-        if(salaActividade.equals("Castelao") || salaActividade.equals("Dali")){
+        if(salaActividade.equals("Castelao")|| salaActividade.equals("castelao") || salaActividade.equals("Dali") || salaActividade.equals("dali")){
             return true;
         }else{
             return false;
@@ -102,7 +102,7 @@ public class Actividade {
     }
 
 
-    public String getSalaActividade() {
+    public String getSalaActividade() {atributos[0]
         return salaActividade;
     }
 
@@ -118,7 +118,7 @@ public class Actividade {
                 + horasSemanais + ", prezoActividade=" + prezoActividade + ", salaActividade=" + salaActividade + "]";
     }
     public String toStringParaFicheiro() {
-        return codActividade + ";" + nomeActividade + ";" + horasSemanais + ";" + prezoActividade + ";" + salaActividade;
+        return codActividade + ";" + nomeActividade + ";" + horasSemanais + ";" + prezoActividade + ";" + salaActividade + "\n";
     }
 
     

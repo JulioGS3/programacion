@@ -1,0 +1,1 @@
+Socio [nome=sd, codSocio=1, apelidos=sd sd, email=sd@sd.com, anoNacamento=0, mesNacemento=0, diaNacemento=0, activiadesInscrito=
