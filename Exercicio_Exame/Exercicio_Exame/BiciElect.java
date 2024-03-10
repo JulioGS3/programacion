@@ -4,8 +4,6 @@ gardaremos o número de bicicletas que se van creando. Define tamén un método 
 recibe 2 BiciElect e devolve a BiciElect con maior autonomía. */
 package Exercicio_Exame;
 
-import Repaso_exame1.repaso;
-
 public class BiciElect {
 
     //clase

@@ -32,8 +32,7 @@ public static void main(String[] args) {
     if (Character.isDigit(primeira) == true){
         cadea = cadea + " é un dixito";
     }
-    if (Character.isLetterOrDigit
-    (primeira) == false){
+    if (Character.isLetterOrDigit(primeira) == false){
         cadea = cadea + " é un simbolo";
     }
     JOptionPane.showMessageDialog(null, cadea);

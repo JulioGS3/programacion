@@ -77,6 +77,24 @@ public class Impresora {
     
         public int hashCode(){
             return follasMinuto;}
+
+            public boolean equals(Object obj){
+                if(obj == null){
+                    return false;
+                }
+                if(this.getClass() != obj.getClass()){
+                return false;
+                }
+                Impresora impresora1 = (Impresora) obj;
+                if(this.precio - impresora1.precio > 10 || impresora1.precio - this.precio >10) {
+                    return false;
+                }
+                if(this.follasMinuto != impresora1.follasMinuto){
+                    return false;
+                }else{
+                    return true;
+                }
+                }
 }
         
 

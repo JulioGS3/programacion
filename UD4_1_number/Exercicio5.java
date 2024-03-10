@@ -32,10 +32,10 @@ public static void main(String[] args) {
                 }
                 if ( Character.isAlphabetic(comprobar) == false){
                     tenSimbolo = true;
-                }        
-        }
+                }         
+            }
             
-
+        
         } while (contrasinal.length() <= 5 || tenMaiuscula == false || tenNumero == false || tenSimbolo == false);
     
         

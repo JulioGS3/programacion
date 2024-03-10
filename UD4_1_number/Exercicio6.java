@@ -17,27 +17,31 @@ public static void main(String[] args) {
     while(!opcion.equals("c")){
 
         opcion = JOptionPane.showInputDialog("Que tipo de conversion queres facer? \n a ) euros a dollares ?  \n b ) dollares a euros ? \n c ) sair  ");
-        String cantidade = JOptionPane.showInputDialog("introduce a cantidade que deseas");
+       
+        switch (opcion) {
 
-        Double cantidadeConvertida = Double.parseDouble(cantidade);
-
-        if(opcion.equals("a")){
-
-            Double cantidadeConvert = cantidadeConvertida * 1.09;
-            String cadea = String.format(cantidadeConvertida + " euros son %08.2f dolares" , cantidadeConvert);
-            JOptionPane.showMessageDialog(null, cadea);
-        }
-        if(opcion.equals("b")){
-
-            Double cantidadeConvert = cantidadeConvertida / 1.09;
-            String cadea = String.format(cantidadeConvertida + " dolares son %08.2f euros" , cantidadeConvert);
-            JOptionPane.showMessageDialog(null, cadea);
-        }
+            case "a":
+                String cantidadeEuros = JOptionPane.showInputDialog("introduce a cantidade  de euros que deseas convertir");
+                Double cantidadeConvertida = Double.parseDouble(cantidadeEuros);
+                Double cantidadeXaConvertida = cantidadeConvertida * 1.09;
+                String cadea = String.format(cantidadeConvertida + " euros son %08.2f dolares" , cantidadeXaConvertida);
+                JOptionPane.showMessageDialog(null, cadea);
+                break;
         
+           case "b":
+                String cantidadeDolares = JOptionPane.showInputDialog("introduce a cantidade  de dolares que deseas convertir");
+                 Double cantidadeConvert = Double.parseDouble(cantidadeDolares);
+                Double cantidade = cantidadeConvert / 1.09;
+                String cadea2 = String.format(cantidadeConvert + " dolares son %08.2f euros" , cantidade);
+                JOptionPane.showMessageDialog(null, cadea2);
+                 break;
+            case "c":
+                JOptionPane.showMessageDialog(null, "adios");
+                break;
       
     }
-    JOptionPane.showMessageDialog(null, "adios");
-    
+   
+}
 
 }
 }

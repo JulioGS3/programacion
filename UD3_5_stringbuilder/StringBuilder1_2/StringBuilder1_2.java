@@ -43,12 +43,12 @@ public StringBuilder eliminaFrase( StringBuilder cadea){
     frase = frase.delete(0, total);
     return frase;
 }
-public StringBuilder mostraFrase (StringBuilder cadea, String saludo){
+public void mostraFrase (StringBuilder cadea, String saludo){
 
     frase = cadea;
     saudo = saludo;
     frase = frase.replace(0, 0, saudo);
-    return frase;
+    System.out.println(frase);
    
 }
 public void mostraLonxitudeEcapacidade(StringBuilder cadea){
@@ -79,6 +79,7 @@ public StringBuilder invertirFrase(StringBuilder cadea){
 
     frase = cadea;
     frase = frase.reverse();
+frase.
     return frase;
 }
 

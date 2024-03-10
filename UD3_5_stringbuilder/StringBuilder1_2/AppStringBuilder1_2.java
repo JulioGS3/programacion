@@ -3,6 +3,9 @@ package UD3_5_stringbuilder.StringBuilder1_2;
 import java.util.Scanner;
 
 public class AppStringBuilder1_2 {
+/**
+ * @param args
+ */
 public static void main(String[] args) {
 
 
@@ -25,21 +28,50 @@ public static void main(String[] args) {
 
         opcion = entrada.nextLine();
 
+    StringBuilder1_2 cadea1 = new StringBuilder1_2 (new StringBuilder("hola"));
+    StringBuilder cadea = new StringBuilder();
+    String saludo = "";
     switch (opcion) {
 
         case "a":
     
         System.out.println("introduce unha frase");
-        String cadea = entrada.nextLine();
-        entrada.nextLine();
+        cadea = new StringBuilder(entrada.nextLine());
+        cadea1.setIniciaFrase(cadea);
 
         System.out.println("introduce un saudo");
-        String saludo = entrada.nextLine();
+        saludo = entrada.nextLine();
 
-       
         
         break;
 
+        case "b":
+
+        cadea1.eliminaFrase(cadea);
+    
+        break;
+
+        case "c":
+        cadea1.mostraFrase(cadea, saludo);
+
+        break;
+
+        case "d":
+
+        cadea1.mostraLonxitudeEcapacidade(cadea);
+        break;
+        case "e":
+
+        cadea1.eliminaParte(0, 6, cadea);
+        break;
+        case "f":
+
+        cadea1.introduceDouble(0, 1.1, cadea);
+        break;
+        case "g":
+
+        cadea1.invertirFrase(cadea);
+        break;
     }
     }
 }

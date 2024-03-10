@@ -37,10 +37,13 @@ public static void main(String[] args) {
         while (contador<=10) {
             
         for (char i : arrayOculto) {
-        palabra = palabra +i;}
+        palabra = palabra + i;}
+        if( palabra.length() > 8){
+            palabra = palabra.substring(8);
+        }
         
         String adivinar = JOptionPane.showInputDialog(palabra);
-        System.out.println(arrayOculto);
+        
         contador++;
       
             while (palabraElexida.contains(adivinar)) {
@@ -50,6 +53,7 @@ public static void main(String[] args) {
             palabraElexida = palabraElexida.replaceFirst(adivinar, ".");
             arrayOculto[posicion] = caracter;
             System.out.println(arrayOculto);
+            
             }
         }
             String mensaxeFinal = "pasacheste de intentos, sintoo";

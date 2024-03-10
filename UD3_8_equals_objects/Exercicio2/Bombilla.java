@@ -149,4 +149,8 @@ public class Bombilla {
         public int hashCode(){
             return potencia;
         }
-}
+    
+
+        
+        }
+
