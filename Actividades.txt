@@ -1,0 +1,5 @@
+1;futbol;2;10.0;dali
+2;baloncesto;2;15.0;castelao
+3;tenis;2;20.0;dali
+4;golf;2;30.0;castelao
+5;loita;2;10.0;dali

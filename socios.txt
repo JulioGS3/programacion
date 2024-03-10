@@ -1,0 +1,8 @@
+juan;2;ju ju;ju@gmail.com;1999;3;3;0;0;0
+pepe;3;pe pe;pe@gmail.com;1999;4;4;1;2;3
+fran;4;fa fa;fa@gmail.com;1995;5;5;0;0;0
+luis;5;lu lu;lu@gmail.com;1996;6;6;0;0;0
+adrian;6;a a;a@gmail.com;1997;7;7;0;0;0
+lucia;7;luc luc;luc@gmail.com;1998;8;8;0;0;0
+manola;1;man man;man@gmail.com;1998;2;2;0;0;0
+maria;8;ma ma;ma@gmail.com;1990;9;9;1;2;3

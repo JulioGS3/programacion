@@ -21,17 +21,18 @@ public class Ex5Produto {
         this.prezo = prezo;
         cantidade = 50;
     }
-    public class Exception extends Ex5Produto {
-    
-    public static int venderProduto(Ex5Produto produto1, int cantidadeVendida) throws Exception{
+   
+
+    public static int venderProduto(Ex5Produto produto1, int cantidadeVendida) throws SenExistencias{
         
         produto1.cantidade= produto1.cantidade-cantidadeVendida;
 
             if (produto1.cantidade < 0 ) {
-            throw new Exception("non quedan unidades");
+            throw new SenExistencias();
 
             }else{return produto1.cantidade;}
         }
    }
+
+
     
-}

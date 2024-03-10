@@ -20,7 +20,7 @@ public class BiciElect {
         nome = nom;
         marca = marc;
         autonomiaKms = autonomia;
-       numBicis++;
+        numBicis++;
     }
     public BiciElect(){
 
