@@ -28,8 +28,8 @@ public static void main(String[] args) {
 
     gaivota1.porOvos();
     gaivota1.voa();
-    gaivota1.porOvos();
-    gaivota1.voa();
+    gaivota2.porOvos();
+    gaivota2.voa();
     
 }
 }

@@ -13,9 +13,11 @@ package UD4_3_interfaces_2.Exercicio4;
 
     //constructor
 
-    public Cliente(String nome, int poblacion, String nomecliente) {
-        super(nome, poblacion);
-        this.nomeCliente = nomecliente;
+    public Cliente(String nome, Cidade ciudad) {
+        super();
+        this.nomeCliente = nome;
+        cidade=ciudad;
+      
       
     }
 
@@ -39,7 +41,7 @@ package UD4_3_interfaces_2.Exercicio4;
 
     public int coompareTo(Object obx){
 
-        Cidade unhaCidade= (Cidade) obx;
+        Cliente unhaCidade= (Cliente) obx;
 
         if(this.poblacion > unhaCidade.poblacion){
             return -1;

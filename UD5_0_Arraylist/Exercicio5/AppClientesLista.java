@@ -12,7 +12,7 @@ public static void main(String[] args) {
     
     String opcion = "";
 
-    ArrayList <Cliente> listaClientes = new ArrayList<Cliente>();
+    ArrayList <Cliente> listaClientes = new ArrayList<>();
 
     while (!opcion.equals("c")) {
 
