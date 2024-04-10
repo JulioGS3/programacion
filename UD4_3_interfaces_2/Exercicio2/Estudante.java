@@ -37,8 +37,9 @@ public class Estudante extends Persona implements Comparable{
         }
         if (this.idade > unEstudante.idade){
             return 1;
+        }else{
+            return 0;
         }
-        return 0;
     }
 
     
