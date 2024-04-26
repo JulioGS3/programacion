@@ -13,6 +13,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 /**
  * 11. 13. Despois de ler o ficheiro carreira.bin nun ArrayList, o programa deberá preguntar se queremos
 gardar máis tempos, e se é así, gardar todos (os que xa había e os novos) no ficheiro.
@@ -23,11 +25,7 @@ public class AppCorredor {
 public static void main(String[] args) {
     
     Path ruta = Paths.get("carreira.bin");
-    try{
-        Path f = Files.createFile(ruta);
-    }catch(IOException e){
-        System.out.println(e);
-    }
+    int contador = 0;
     Scanner sca = new Scanner(System.in);
     FileOutputStream fos = null;
     DataOutputStream salida = null;
@@ -35,28 +33,17 @@ public static void main(String[] args) {
     DataInputStream entrada = null;
     int dorsal;
     Double tempo;
-    int contador = 0;
     ArrayList <Corredor> array = new ArrayList<Corredor>();
-
-    try{
-         input = new ObjectInputStream(          
-            Files.newInputStream(ruta));
-      } 
-      catch (IOException ioException)
-      {
-         System.err.println("Erro abrindo ficheiro.");
-         System.exit(1);
-      } 
-    
     try{
         fos = new FileOutputStream("carreira.bin");
         fis = new FileInputStream("carreira.bin");
         salida = new DataOutputStream(fos);
         entrada = new DataInputStream(fis);
+        
         while (contador != 5) {
             
             System.out.println("introduce o dorsal e o tempo dun corredor da carreira");
-            dorsal= sca.nextInt();
+            dorsal = sca.nextInt();
             tempo = sca.nextDouble();
             salida.writeInt(dorsal);
             salida.writeDouble(tempo);

@@ -40,6 +40,7 @@ public static void main(String[] args) {
         fis = new FileInputStream("carreira.bin");
         salida = new DataOutputStream(fos);
         entrada = new DataInputStream(fis);
+        
         System.out.println("introduce o dorsal e o tempo dun corredor da carreira");
         dorsal= sc.nextInt();
         tempo = sc.nextDouble();
@@ -57,6 +58,7 @@ public static void main(String[] args) {
             dorsal= sc.nextInt();
             tempo = sc.nextDouble();
             contador++;
+            salida.flush();
         }
     } catch (FileNotFoundException e) {
         System.out.println(e.getMessage());
