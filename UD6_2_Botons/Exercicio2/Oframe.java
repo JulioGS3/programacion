@@ -1,5 +1,6 @@
 package UD6_2_Botons.Exercicio2;
 
+import java.awt.Frame;
 import java.awt.event.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -52,7 +53,7 @@ public class BotonPechaListener implements ActionListener {
 }
 public class BotonMinimizaListener implements ActionListener {
     public void actionPerformed(ActionEvent e){
-        JFrame.setExtendedState();
+        setExtendedState(Frame.ICONIFIED);
         }
 }
 public class VentaListener extends WindowAdapter{
