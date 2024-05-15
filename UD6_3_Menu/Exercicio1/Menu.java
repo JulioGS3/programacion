@@ -32,15 +32,15 @@ public Menu (){
 public void caracteristicasBotons (){
 
     boton.setBounds(500,500,150,50);
-    menu.add(subMenu);
-    barraMenus.add(menu);
-    setJMenuBar(barraMenus);
     setSize(300, 300);
-    getContentPane().add(panel);   
+      
 }
 public void colocaObxetos(){
     panel.add(boton);
-  
+    menu.add(subMenu);
+    barraMenus.add(menu);
+    setJMenuBar(barraMenus);
+    getContentPane().add(panel);
 }
 public void engadirEscoitadores(){
     subMenu.addActionListener(new EscoitadorMenu());

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -26,14 +27,21 @@ public class Menu extends JFrame {
     JMenuItem minimizar = new JMenuItem("Minimizar");
     JMenuItem maximizar = new JMenuItem("Maximizar");
     JMenuItem normal = new JMenuItem("normal");
+    JLabel etiqueta = new JLabel("x");
     
     public Menu (){
 
         caracteristicasMenus();
         engadirEscoitadores();
+        colocaObxetos();
     }
 
     public void caracteristicasMenus (){
+        
+        etiqueta.setBounds(300, 300, 600, 300);
+    }
+
+    public void colocaObxetos(){
 
         getContentPane().add(panel);
         menuFicheiro.add(sair);
@@ -43,6 +51,7 @@ public class Menu extends JFrame {
         barraMenus.add(menuFicheiro);
         barraMenus.add(menuTamaño);
         setJMenuBar(barraMenus);
+        panel.add(etiqueta);
     }
    
     public void engadirEscoitadores (){
@@ -59,16 +68,20 @@ public class Menu extends JFrame {
     private class BotonMinimizar implements ActionListener {
         public void actionPerformed(ActionEvent e){
             setExtendedState(Frame.ICONIFIED);
+            etiqueta.setText("minimizado");
+            
         }
     }
     private class BotonMaximizar implements ActionListener {
         public void actionPerformed(ActionEvent e){
         setExtendedState(Frame.MAXIMIZED_BOTH);
+        etiqueta.setText("maximizado");
         }
     }
     private class BotonNormal implements ActionListener {
         public void actionPerformed(ActionEvent e){
             setExtendedState(Frame.NORMAL);
+            etiqueta.setText("normal");
         }
         
     }
