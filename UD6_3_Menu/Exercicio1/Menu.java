@@ -1,3 +1,5 @@
+/*Fai un programa que mostre unha ventá con un botón que poña “Sair”, que saia cando se pulse. 
+A ventá deberá ter unh menú Ficheiro con un submenú “Sair” que tamén peche a ventá cando se pulse */
 package UD6_3_Menu.Exercicio1;
 
 import java.awt.event.ActionEvent;
@@ -29,24 +31,25 @@ public Menu (){
 
 public void caracteristicasBotons (){
 
-    getContentPane().add(panel);
-    boton.setBounds(300,100,150,50);
+    boton.setBounds(500,500,150,50);
     menu.add(subMenu);
     barraMenus.add(menu);
     setJMenuBar(barraMenus);
-    setSize(300, 300);   
+    setSize(300, 300);
+    getContentPane().add(panel);   
 }
 public void colocaObxetos(){
-
+    panel.add(boton);
+  
 }
 public void engadirEscoitadores(){
     subMenu.addActionListener(new EscoitadorMenu());
-    
+    boton.addActionListener(new EscoitadorMenu());
 }
 private class EscoitadorMenu implements ActionListener{
     public void actionPerformed(ActionEvent e){
-
+        System.exit(0);
     }
-    
+
 }
 }

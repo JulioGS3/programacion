@@ -4,6 +4,10 @@ package UD6_3_Menu.Exercicio1;
  A ventá deberá ter unh menú Ficheiro con un submenú “Sair” que tamén peche a ventá cando se pulse Main
  */
 public class Main {
-
+public static void main(String[] args) {
+    Menu unMenu = new Menu();
+    unMenu.setVisible(true);
+    unMenu.setSize(600, 600);
+}
     
 }
